@@ -1,0 +1,139 @@
+/* frontend/src/styles/App.css */
+
+/* --- 1. Global & Utility Styles --- */
+body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+        'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+        sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background-color: #f4f7f6; /* Light gray background */
+    color: #333;
+}
+
+.container {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    color: #009688; /* Primary app color (from PWA manifest) */
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 2em;
+}
+
+h2 {
+    color: #555;
+    border-bottom: 2px solid #eee;
+    padding-bottom: 8px;
+    margin-top: 25px;
+}
+
+/* --- 2. Form and Buttons --- */
+.form-upload {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+/* Hide the actual file input and style the label instead */
+#file-upload {
+    display: none;
+}
+
+.form-upload label, .btn-predict {
+    padding: 12px 20px;
+    border-radius: 8px;
+    font-size: 1.1em;
+    cursor: pointer;
+    text-align: center;
+    transition: background-color 0.3s, opacity 0.3s;
+}
+
+.form-upload label {
+    background-color: #009688;
+    color: white;
+    border: none;
+}
+
+.form-upload label:hover {
+    background-color: #00796b;
+}
+
+.btn-predict {
+    background-color: #3f51b5; /* Secondary action color */
+    color: white;
+    border: none;
+}
+
+.btn-predict:disabled {
+    background-color: #b0b0b0;
+    cursor: not-allowed;
+    opacity: 0.8;
+}
+
+/* --- 3. Image and Preview --- */
+.image-preview {
+    margin: 20px 0;
+    text-align: center;
+}
+
+.image-preview img {
+    max-width: 100%;
+    max-height: 400px;
+    border: 3px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+}
+
+/* --- 4. Results and Suggestions --- */
+.results {
+    padding: 20px;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+}
+
+.suggestion-box {
+    margin-top: 20px;
+    display: grid;
+    gap: 20px;
+}
+
+@media (min-width: 600px) {
+    /* Two-column layout for suggestions on wider screens */
+    .suggestion-box {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+.suggestion-item {
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    background-color: #fff;
+}
+
+.suggestion-item h4 {
+    margin-top: 0;
+    font-size: 1.1em;
+    font-weight: 600;
+    color: #3f51b5; /* Secondary color for titles */
+}
+
+/* Specific style for error message */
+.error-message {
+    color: white;
+    background-color: #d32f2f; /* Red error color */
+    padding: 15px;
+    border-radius: 8px;
+    text-align: center;
+    margin-bottom: 20px;
+}
