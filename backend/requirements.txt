@@ -1,0 +1,8 @@
+flask
+flask-cors
+# Use the exact versions from your Colab environment
+torch==2.8.0 
+torchvision==0.23.0
+pillow
+gunicorn 
+numpy # Good practice, often a dependency of others
