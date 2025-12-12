@@ -1,0 +1,197 @@
+{
+  "Apple___Apple_scab": {
+    "title": "Apple — Apple scab",
+    "description": "A fungal disease causing olive-green to brown scabby lesions on leaves and fruit; favored by cool, wet weather. Remove fallen leaves and apply appropriate fungicides during wet periods.",
+    "sample_image": "apple_apple_scab.jpg"
+  },
+  "Apple___Black_rot": {
+    "title": "Apple — Black rot",
+    "description": "Fungal disease that causes circular dark fruit lesions and leaf spots; sanitation and pruning of infected wood helps reduce inoculum.",
+    "sample_image": "apple_black_rot.jpg"
+  },
+  "Apple___Cedar_apple_rust": {
+    "title": "Apple — Cedar apple rust",
+    "description": "A fungal disease requiring both apple and cedar hosts; orange gelatinous spore horns on leaves in wet weather are typical signs. Remove nearby junipers and apply protective sprays.",
+    "sample_image": "apple_cedar_apple_rust.jpg"
+  },
+  "Apple___healthy": {
+    "title": "Apple — Healthy",
+    "description": "No visible disease symptoms. Maintain balanced nutrition, regular monitoring, and good pruning practices.",
+    "sample_image": "apple_healthy.jpg"
+  },
+  "Blueberry___healthy": {
+    "title": "Blueberry — Healthy",
+    "description": "No visible disease symptoms. Keep soil acidic and provide consistent moisture and nutrients for optimal fruiting.",
+    "sample_image": "blueberry_healthy.jpg"
+  },
+  "Cherry_(including_sour)___Powdery_mildew": {
+    "title": "Cherry — Powdery mildew",
+    "description": "White powdery fungal growth on leaves and shoots, often in humid but not saturated conditions. Prune for airflow and apply sulfur or potassium bicarbonate treatments if needed.",
+    "sample_image": "cherry_powdery_mildew.jpg"
+  },
+  "Cherry_(including_sour)___healthy": {
+    "title": "Cherry — Healthy",
+    "description": "No visible disease symptoms. Ensure good sanitation and nutrient balance for healthy trees.",
+    "sample_image": "cherry_healthy.jpg"
+  },
+  "Corn_(maize)___Cercospora_leaf_spot Gray_leaf_spot": {
+    "title": "Corn — Cercospora / Gray leaf spot",
+    "description": "Fungal leaf spots that reduce photosynthetic area and yield; use resistant varieties, crop rotation, and fungicides when necessary.",
+    "sample_image": "corn_cercospora_gray_leaf_spot.jpg"
+  },
+  "Corn_(maize)___Common_rust_": {
+    "title": "Corn — Common rust",
+    "description": "Reddish-brown pustules on leaves caused by rust fungi; generally managed with resistant hybrids and by avoiding prolonged leaf wetness.",
+    "sample_image": "corn_common_rust.jpg"
+  },
+  "Corn_(maize)___Northern_Leaf_Blight": {
+    "title": "Corn — Northern leaf blight",
+    "description": "Long, elliptical tan lesions on leaves often caused by Exserohilum turcicum; manage with resistant varieties and fungicide applications under high disease pressure.",
+    "sample_image": "corn_northern_leaf_blight.jpg"
+  },
+  "Corn_(maize)___healthy": {
+    "title": "Corn — Healthy",
+    "description": "No visible disease symptoms. Maintain balanced fertility and irrigation practices.",
+    "sample_image": "corn_healthy.jpg"
+  },
+  "Grape___Black_rot": {
+    "title": "Grape — Black rot",
+    "description": "A fungal disease causing dark, circular lesions on leaves and fruit; sanitation and timely fungicide programs reduce spread.",
+    "sample_image": "grape_black_rot.jpg"
+  },
+  "Grape___Esca_(Black_Measles)": {
+    "title": "Grape — Esca (Black Measles)",
+    "description": "A complex trunk disease leading to discolored fruit and vine decline; focus on sanitation, removal of infected wood, and cultural controls.",
+    "sample_image": "grape_esca_black_measles.jpg"
+  },
+  "Grape___Leaf_blight_(Isariopsis_Leaf_Spot)": {
+    "title": "Grape — Leaf blight (Isariopsis)",
+    "description": "Fungal leaf spots that reduce canopy health; avoid overhead irrigation and apply copper-based controls when necessary.",
+    "sample_image": "grape_leaf_blight_isariopsis.jpg"
+  },
+  "Grape___healthy": {
+    "title": "Grape — Healthy",
+    "description": "No visible disease symptoms. Provide balanced nutrients and good canopy management.",
+    "sample_image": "grape_healthy.jpg"
+  },
+  "Orange___Haunglongbing_(Citrus_greening)": {
+    "title": "Orange — Huanglongbing (Citrus greening)",
+    "description": "A bacterial disease transmitted by psyllids, causing yellowing, misshapen fruit, and tree decline; manage vectors and follow local eradication guidelines.",
+    "sample_image": "orange_huanglongbing.jpg"
+  },
+  "Peach___Bacterial_spot": {
+    "title": "Peach — Bacterial spot",
+    "description": "Bacterial lesions on leaves and fruit that reduce quality; copper-based sprays and avoiding overhead irrigation help control spread.",
+    "sample_image": "peach_bacterial_spot.jpg"
+  },
+  "Peach___healthy": {
+    "title": "Peach — Healthy",
+    "description": "No visible disease symptoms. Maintain good fertilization and pruning practices.",
+    "sample_image": "peach_healthy.jpg"
+  },
+  "Pepper,_bell___Bacterial_spot": {
+    "title": "Bell Pepper — Bacterial spot",
+    "description": "Bacterial lesions on fruit and foliage that can reduce yield; use certified seed, practice sanitation, and apply allowed bactericides.",
+    "sample_image": "pepper_bacterial_spot.jpg"
+  },
+  "Pepper,_bell___healthy": {
+    "title": "Bell Pepper — Healthy",
+    "description": "No visible disease symptoms. Provide even moisture and balanced feeding for best production.",
+    "sample_image": "pepper_healthy.jpg"
+  },
+  "Potato___Early_blight": {
+    "title": "Potato — Early blight",
+    "description": "Concentric ring leaf spots on older foliage caused by Alternaria species; remove affected debris and consider protective fungicides.",
+    "sample_image": "potato_early_blight.jpg"
+  },
+  "Potato___Late_blight": {
+    "title": "Potato — Late blight",
+    "description": "Rapidly spreading blight causing dark lesions and tuber rot (Phytophthora infestans); use certified seed, good drainage, and timely fungicides.",
+    "sample_image": "potato_late_blight.jpg"
+  },
+  "Potato___healthy": {
+    "title": "Potato — Healthy",
+    "description": "No visible disease symptoms. Maintain balanced soil nutrition and good crop hygiene.",
+    "sample_image": "potato_healthy.jpg"
+  },
+  "Raspberry___healthy": {
+    "title": "Raspberry — Healthy",
+    "description": "No visible disease symptoms. Ensure good pruning and site selection to reduce disease pressure.",
+    "sample_image": "raspberry_healthy.jpg"
+  },
+  "Soybean___healthy": {
+    "title": "Soybean — Healthy",
+    "description": "No visible disease symptoms. Follow recommended rotations and nutrient management for healthy stands.",
+    "sample_image": "soybean_healthy.jpg"
+  },
+  "Squash___Powdery_mildew": {
+    "title": "Squash — Powdery mildew",
+    "description": "White powdery patches on leaves and stems common in warm, dry days with high humidity at night; apply potassium bicarbonate or remove infected tissue.",
+    "sample_image": "squash_powdery_mildew.jpg"
+  },
+  "Strawberry___Leaf_scorch": {
+    "title": "Strawberry — Leaf scorch",
+    "description": "Leaf scorch leads to browning and reduced leaf area, often fungal or environmental; remove badly affected plants and consider appropriate fungicide treatments.",
+    "sample_image": "strawberry_leaf_scorch.jpg"
+  },
+  "Strawberry___healthy": {
+    "title": "Strawberry — Healthy",
+    "description": "No visible disease symptoms. Use balanced feeding and mulch to protect fruit quality.",
+    "sample_image": "strawberry_healthy.jpg"
+  },
+  "Tomato___Bacterial_spot": {
+    "title": "Tomato — Bacterial spot",
+    "description": "Bacterial lesions on leaves and fruit reduce marketability; practice sanitation and use copper sprays where permitted.",
+    "sample_image": "tomato_bacterial_spot.jpg"
+  },
+  "Tomato___Early_blight": {
+    "title": "Tomato — Early blight",
+    "description": "Concentric lesions on older leaves caused by Alternaria, often promoted by warm, wet weather; remove crop debris and use protective fungicides.",
+    "sample_image": "tomato_early_blight.jpg"
+  },
+  "Tomato___Late_blight": {
+    "title": "Tomato — Late blight",
+    "description": "Serious disease causing water-soaked lesions that rapidly progress; apply recommended fungicides and remove infected plants promptly.",
+    "sample_image": "tomato_late_blight.jpg"
+  },
+  "Tomato___Leaf_Mold": {
+    "title": "Tomato — Leaf mold",
+    "description": "Yellowing and olive-green fuzzy growth on leaf undersides in humid conditions; improve ventilation and use sulfur or copper treatments as appropriate.",
+    "sample_image": "tomato_leaf_mold.jpg"
+  },
+  "Tomato___Septoria_leaf_spot": {
+    "title": "Tomato — Septoria leaf spot",
+    "description": "Small circular spots with gray centers caused by Septoria lycopersici; manage with sanitation, mulching, and fungicide sprays when needed.",
+    "sample_image": "tomato_septoria_leaf_spot.jpg"
+  },
+  "Tomato___Spider_mites Two-spotted_spider_mite": {
+    "title": "Tomato — Spider mites (Two-spotted)",
+    "description": "Tiny mites that cause stippling and webbing on leaves under hot, dry conditions; control with miticides or biological predators and increase humidity where feasible.",
+    "sample_image": "tomato_spider_mites.jpg"
+  },
+  "Tomato___Target_Spot": {
+    "title": "Tomato — Target spot",
+    "description": "Leaf spots with concentric rings that can coalesce and defoliate plants; apply cultural controls and fungicides as recommended.",
+    "sample_image": "tomato_target_spot.jpg"
+  },
+  "Tomato___Tomato_Yellow_Leaf_Curl_Virus": {
+    "title": "Tomato — Tomato yellow leaf curl virus",
+    "description": "Virus transmitted by whiteflies causing leaf curling, yellowing and severe stunting; control whiteflies and remove infected plants to prevent spread.",
+    "sample_image": "tomato_yellow_leaf_curl_virus.jpg"
+  },
+  "Tomato___Tomato_mosaic_virus": {
+    "title": "Tomato — Tomato mosaic virus",
+    "description": "Viral disease causing mottling and distortion of leaves and fruit; remove infected plants and disinfect tools and hands after handling.",
+    "sample_image": "tomato_mosaic_virus.jpg"
+  },
+  "Tomato___healthy": {
+    "title": "Tomato — Healthy",
+    "description": "No visible disease symptoms. Continue best practices for watering, feeding, and ventilation.",
+    "sample_image": "tomato_healthy.jpg"
+  },
+  "default": {
+    "title": "Unknown Disease",
+    "description": "A description for this class is not available. You can add an entry to this file with a `title`, `description`, and optional `sample_image` filename.",
+    "sample_image": "logo192.png"
+  }
+}
