@@ -1,0 +1,10 @@
+{
+  "id": "Peach___healthy",
+  "title": "Peach — Healthy",
+  "description": "No visible disease symptoms. Maintain good fertilization and pruning practices.",
+  "treatment": {
+    "chemical": "No treatment needed. Continue monitoring and good orchard practices.",
+    "organic": "No treatment needed. Use organic practices and regular inspection."
+  },
+  "human_verified": true
+}

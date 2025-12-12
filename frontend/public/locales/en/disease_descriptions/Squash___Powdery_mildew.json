@@ -1,0 +1,10 @@
+{
+  "id": "Squash___Powdery_mildew",
+  "title": "Squash — Powdery mildew",
+  "description": "White powdery patches on leaves and stems common in warm, dry days with high humidity at night; apply potassium bicarbonate or remove infected tissue.",
+  "treatment": {
+    "chemical": "Apply sulfur or potassium bicarbonate at first sign of disease and repeat every 7-10 days.",
+    "organic": "Remove infected leaves, improve air circulation, use neem oil, or apply potassium bicarbonate."
+  },
+  "human_verified": false
+}

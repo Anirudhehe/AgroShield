@@ -1,0 +1,10 @@
+{
+  "id": "Strawberry___Leaf_scorch",
+  "title": "Strawberry — Leaf scorch",
+  "description": "Leaf scorch leads to browning and reduced leaf area, often fungal or environmental; remove badly affected plants and consider appropriate fungicide treatments.",
+  "treatment": {
+    "chemical": "Apply fungicides such as myclobutanil or sulfur if disease is active.",
+    "organic": "Remove affected plants, improve irrigation practices, and use neem oil if needed."
+  },
+  "human_verified": false
+}

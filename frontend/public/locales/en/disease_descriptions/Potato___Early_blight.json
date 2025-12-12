@@ -1,0 +1,10 @@
+{
+  "id": "Potato___Early_blight",
+  "title": "Potato — Early blight",
+  "description": "Concentric ring leaf spots on older foliage caused by Alternaria species; remove affected debris and consider protective fungicides.",
+  "treatment": {
+    "chemical": "Apply mancozeb or chlorothalonil starting when plants are 6 inches tall and repeat every 7-10 days.",
+    "organic": "Remove infected foliage, improve air circulation, and use copper-based sprays."
+  },
+  "human_verified": false
+}

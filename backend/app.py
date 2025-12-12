@@ -1,4 +1,4 @@
-from flask import Flask, request, jsonify
+from flask import Flask, request, jsonify, send_file, send_from_directory, abort
 from flask_cors import CORS
 from PIL import Image
 import torch
@@ -101,6 +101,37 @@ def predict():
         # Log the detailed error on the server side
         print(f"Prediction failed with error: {e}") 
         return jsonify({'error': 'Internal server error during prediction.'}), 500
+
+
+# --- Localization endpoints (serve manifest and localized disease descriptions)
+@app.route('/locales-manifest.json', methods=['GET'])
+def locales_manifest():
+    # Prefer a manifest in a configured static path (frontend/public)
+    manifest_path = os.path.join(os.path.dirname(__file__), '..', 'frontend', 'public', 'locales-manifest.json')
+    if os.path.exists(manifest_path):
+        return send_file(manifest_path, mimetype='application/json')
+    return jsonify({'error': 'manifest not found'}), 404
+
+
+@app.route('/api/disease/<disease_id>', methods=['GET'])
+def api_disease(disease_id):
+    """Return localized disease payload if available. Query param `lang` optional."""
+    lang = request.args.get('lang', 'en')
+    # path under frontend/public/locales/{lang}/disease_descriptions/{id}.json
+    base = os.path.join(os.path.dirname(__file__), '..', 'frontend', 'public', 'locales')
+    # sanitize disease_id
+    safe_id = disease_id.replace('..', '').replace('/', '')
+    file_path = os.path.join(base, lang, 'disease_descriptions', f"{safe_id}.json")
+    if not os.path.exists(file_path):
+        # fallback to english
+        file_path = os.path.join(base, 'en', 'disease_descriptions', f"{safe_id}.json")
+        if not os.path.exists(file_path):
+            return jsonify({'error': 'disease description not found'}), 404
+    try:
+        return send_file(file_path, mimetype='application/json')
+    except Exception as e:
+        print('serve disease file error', e)
+        return jsonify({'error': 'failed to read file'}), 500
 
 # --- Start Server ---
 # Gunicorn handles the running on Render, but this is for local testing

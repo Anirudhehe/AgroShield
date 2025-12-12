@@ -1,0 +1,9 @@
+{
+  "version": "1.0.0",
+  "generated_at": "2025-12-12T00:00:00Z",
+  "locales": {
+    "en": { "version": "1.0.0", "files": ["/locales/en/translation.json"] },
+    "hi": { "version": "1.0.0", "files": ["/locales/hi/translation.json"] },
+    "kn": { "version": "1.0.0", "files": ["/locales/kn/translation.json"] }
+  }
+}

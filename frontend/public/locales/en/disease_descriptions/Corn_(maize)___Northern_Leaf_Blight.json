@@ -1,0 +1,10 @@
+{
+  "id": "Corn_(maize)___Northern_Leaf_Blight",
+  "title": "Corn — Northern leaf blight",
+  "description": "Long, elliptical tan lesions on leaves often caused by Exserohilum turcicum; manage with resistant varieties and fungicide applications under high disease pressure.",
+  "treatment": {
+    "chemical": "Apply azoxystrobin or pyraclostrobin starting at V6 stage if disease is present.",
+    "organic": "Use resistant varieties and crop rotation; monitor closely during warm, wet weather."
+  },
+  "human_verified": false
+}

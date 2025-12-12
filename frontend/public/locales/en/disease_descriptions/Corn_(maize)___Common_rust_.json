@@ -1,0 +1,10 @@
+{
+  "id": "Corn_(maize)___Common_rust_",
+  "title": "Corn — Common rust",
+  "description": "Reddish-brown pustules on leaves caused by rust fungi; generally managed with resistant hybrids and by avoiding prolonged leaf wetness.",
+  "treatment": {
+    "chemical": "Apply triazole or strobilurin fungicides if rust appears before silking stage.",
+    "organic": "Use resistant varieties and ensure good air circulation to reduce leaf wetness."
+  },
+  "human_verified": false
+}

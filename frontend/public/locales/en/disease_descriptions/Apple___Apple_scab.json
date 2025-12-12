@@ -1,0 +1,10 @@
+{
+  "id": "Apple___Apple_scab",
+  "title": "Apple — Apple scab",
+  "description": "A fungal disease causing olive-green to brown scabby lesions on leaves and fruit; favored by cool, wet weather. Remove fallen leaves and apply appropriate fungicides during wet periods.",
+  "treatment": {
+    "chemical": "Apply fungicides such as captan or myclobutanil at green tip and repeat as needed.",
+    "organic": "Remove fallen leaves, use sulfur-based sprays, and improve air circulation."
+  },
+  "human_verified": false
+}

@@ -1,0 +1,10 @@
+{
+  "id": "Tomato___Spider_mites",
+  "title": "Tomato — Spider mites",
+  "description": "Fine webbing and stippled leaves caused by spider mites; spray with water to dislodge and use miticides if severe.",
+  "treatment": {
+    "chemical": "Apply miticides such as abamectin or bifenthrin when mite populations become damaging.",
+    "organic": "Spray with water to dislodge mites, use neem oil, or apply horticultural oils."
+  },
+  "human_verified": false
+}

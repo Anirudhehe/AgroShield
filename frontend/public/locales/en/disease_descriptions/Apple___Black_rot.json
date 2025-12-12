@@ -1,0 +1,10 @@
+{
+  "id": "Apple___Black_rot",
+  "title": "Apple — Black rot",
+  "description": "Fungal disease that causes circular dark fruit lesions and leaf spots; sanitation and pruning of infected wood helps reduce inoculum.",
+  "treatment": {
+    "chemical": "Apply fungicides such as thiophanate-methyl or captan at petal fall and repeat as needed.",
+    "organic": "Remove and destroy infected wood, prune for airflow, and use copper-based sprays."
+  },
+  "human_verified": false
+}

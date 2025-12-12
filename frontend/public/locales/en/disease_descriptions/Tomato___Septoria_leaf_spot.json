@@ -1,0 +1,10 @@
+{
+  "id": "Tomato___Septoria_leaf_spot",
+  "title": "Tomato — Septoria leaf spot",
+  "description": "Small circular lesions with dark borders and pale centers on leaves; remove affected foliage and apply fungicides.",
+  "treatment": {
+    "chemical": "Apply chlorothalonil or mancozeb when disease first appears and repeat every 7-10 days.",
+    "organic": "Remove infected foliage, improve air circulation, and use copper-based sprays."
+  },
+  "human_verified": false
+}

@@ -1,0 +1,10 @@
+{
+  "id": "Tomato___Leaf_Mold",
+  "title": "Tomato — Leaf Mold",
+  "description": "Yellow spots on upper leaf surface and olive-green mold on lower surface; reduce humidity and apply preventive fungicides.",
+  "treatment": {
+    "chemical": "Apply protectant fungicides such as chlorothalonil or copper-based products.",
+    "organic": "Improve air circulation, reduce humidity through pruning, and use neem oil if needed."
+  },
+  "human_verified": false
+}

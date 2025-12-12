@@ -1,0 +1,10 @@
+{
+  "id": "Grape___Black_rot",
+  "title": "Grape — Black rot",
+  "description": "A fungal disease causing dark, circular lesions on leaves and fruit; sanitation and timely fungicide programs reduce spread.",
+  "treatment": {
+    "chemical": "Apply mancozeb or myclobutanil at bloom and repeat every 10-14 days until fruit matures.",
+    "organic": "Remove infected fruit and leaves, improve air circulation, and use copper-based sprays."
+  },
+  "human_verified": false
+}

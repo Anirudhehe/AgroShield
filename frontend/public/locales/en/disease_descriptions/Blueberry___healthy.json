@@ -1,0 +1,10 @@
+{
+  "id": "Blueberry___healthy",
+  "title": "Blueberry — Healthy",
+  "description": "No visible disease symptoms. Keep soil acidic and provide consistent moisture and nutrients for optimal fruiting.",
+  "treatment": {
+    "chemical": "No treatment needed. Maintain soil pH and regular care.",
+    "organic": "No treatment needed. Use organic mulch and monitor plant health."
+  },
+  "human_verified": true
+}

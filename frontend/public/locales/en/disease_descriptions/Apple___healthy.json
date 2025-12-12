@@ -1,0 +1,10 @@
+{
+  "id": "Apple___healthy",
+  "title": "Apple — Healthy",
+  "description": "No visible disease symptoms. Maintain balanced nutrition, regular monitoring, and good pruning practices.",
+  "treatment": {
+    "chemical": "No treatment needed. Continue monitoring and good orchard hygiene.",
+    "organic": "No treatment needed. Maintain organic practices and regular inspection."
+  },
+  "human_verified": true
+}

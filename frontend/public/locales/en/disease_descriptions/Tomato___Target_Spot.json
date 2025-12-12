@@ -1,0 +1,10 @@
+{
+  "id": "Tomato___Target_Spot",
+  "title": "Tomato — Target Spot",
+  "description": "Dark lesions with concentric rings resembling a target; remove affected foliage and apply protective fungicides.",
+  "treatment": {
+    "chemical": "Apply chlorothalonil or mancozeb when disease first appears and repeat every 7-10 days.",
+    "organic": "Remove infected foliage, improve air circulation, and use copper-based sprays."
+  },
+  "human_verified": false
+}

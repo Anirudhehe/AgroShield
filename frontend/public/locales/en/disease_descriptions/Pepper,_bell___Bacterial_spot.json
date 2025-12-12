@@ -1,0 +1,10 @@
+{
+  "id": "Pepper,_bell___Bacterial_spot",
+  "title": "Bell Pepper — Bacterial spot",
+  "description": "Bacterial lesions on fruit and foliage that can reduce yield; use certified seed, practice sanitation, and apply allowed bactericides.",
+  "treatment": {
+    "chemical": "Apply copper-based bactericides when lesions first appear and repeat every 7-10 days.",
+    "organic": "Use certified seed, practice crop rotation, avoid overhead irrigation, and use copper sprays."
+  },
+  "human_verified": false
+}

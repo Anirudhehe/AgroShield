@@ -1,0 +1,10 @@
+{
+  "app_title": "AgroShield",
+  "analyze_image": "Analyze Image",
+  "analyze_another": "Analyze Another Image",
+  "treatment_suggestions": "Treatment Suggestions",
+  "chemical": "Chemical/Synthetic",
+  "organic": "Organic Alternative",
+  "verify_badge": "⚠️ Verify with agronomist",
+  "copy": "Copy"
+}

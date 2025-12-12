@@ -1,0 +1,10 @@
+{
+  "id": "Tomato___Late_blight",
+  "title": "Tomato — Late blight",
+  "description": "Rapidly advancing blight on fruit and foliage (Phytophthora); use preventive fungicides and remove affected plants.",
+  "treatment": {
+    "chemical": "Apply mancozeb or chlorothalonil when weather favors disease and repeat every 7-10 days.",
+    "organic": "Remove infected plants, improve drainage, and use copper-based sprays."
+  },
+  "human_verified": false
+}

@@ -1,0 +1,10 @@
+{
+  "id": "Grape___healthy",
+  "title": "Grape — Healthy",
+  "description": "No visible disease symptoms. Provide balanced nutrients and good canopy management.",
+  "treatment": {
+    "chemical": "No treatment needed. Maintain regular monitoring and care.",
+    "organic": "No treatment needed. Use organic practices and regular inspection."
+  },
+  "human_verified": true
+}

@@ -1,0 +1,10 @@
+{
+  "id": "Tomato___Bacterial_spot",
+  "title": "Tomato — Bacterial spot",
+  "description": "Dark, water-soaked lesions on fruit and foliage caused by various Xanthomonas and Pseudomonas species; use certified seed and apply copper-based bactericides.",
+  "treatment": {
+    "chemical": "Apply copper-based bactericides such as fixed copper when plants are 12 inches tall and repeat every 7-10 days.",
+    "organic": "Use certified seed, practice crop rotation, avoid overhead watering, and use copper sprays."
+  },
+  "human_verified": false
+}

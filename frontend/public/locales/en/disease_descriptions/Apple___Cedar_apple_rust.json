@@ -1,0 +1,10 @@
+{
+  "id": "Apple___Cedar_apple_rust",
+  "title": "Apple — Cedar apple rust",
+  "description": "A fungal disease requiring both apple and cedar hosts; orange gelatinous spore horns on leaves in wet weather are typical signs. Remove nearby junipers and apply protective sprays.",
+  "treatment": {
+    "chemical": "Apply myclobutanil or propiconazole at pink bud and repeat as needed.",
+    "organic": "Remove nearby junipers, use sulfur-based sprays, and prune for airflow."
+  },
+  "human_verified": false
+}

@@ -1,0 +1,10 @@
+{
+  "id": "Corn_(maize)___Cercospora_leaf_spot Gray_leaf_spot",
+  "title": "Corn — Cercospora / Gray leaf spot",
+  "description": "Fungal leaf spots that reduce photosynthetic area and yield; use resistant varieties, crop rotation, and fungicides when necessary.",
+  "treatment": {
+    "chemical": "Apply azoxystrobin or pyraclostrobin fungicides starting at V6 stage and repeat as needed.",
+    "organic": "Use crop rotation, resistant varieties, and copper-based sprays if available."
+  },
+  "human_verified": false
+}

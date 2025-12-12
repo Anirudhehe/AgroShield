@@ -1,0 +1,10 @@
+{
+  "id": "Peach___Bacterial_spot",
+  "title": "Peach — Bacterial spot",
+  "description": "Bacterial lesions on leaves and fruit that reduce quality; copper-based sprays and avoiding overhead irrigation help control spread.",
+  "treatment": {
+    "chemical": "Apply copper-based fungicides at bud break and repeat every 10-14 days during wet weather.",
+    "organic": "Use copper-based sprays, avoid overhead irrigation, and remove infected tissue."
+  },
+  "human_verified": false
+}

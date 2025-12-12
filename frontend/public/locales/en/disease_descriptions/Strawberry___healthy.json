@@ -1,0 +1,10 @@
+{
+  "id": "Strawberry___healthy",
+  "title": "Strawberry — Healthy",
+  "description": "No visible disease symptoms. Use balanced feeding and mulch to protect fruit quality.",
+  "treatment": {
+    "chemical": "No treatment needed. Continue monitoring and good farming practices.",
+    "organic": "No treatment needed. Use organic practices and regular inspection."
+  },
+  "human_verified": true
+}

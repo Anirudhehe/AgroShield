@@ -1,0 +1,10 @@
+{
+  "id": "Tomato___healthy",
+  "title": "Tomato — Healthy",
+  "description": "No visible disease symptoms. Provide consistent watering and balanced nutrition for optimal production.",
+  "treatment": {
+    "chemical": "No treatment needed. Continue monitoring and good agronomic practices.",
+    "organic": "No treatment needed. Maintain organic practices and regular inspection."
+  },
+  "human_verified": true
+}

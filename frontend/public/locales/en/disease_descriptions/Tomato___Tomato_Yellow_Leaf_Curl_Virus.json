@@ -1,0 +1,10 @@
+{
+  "id": "Tomato___Tomato_Yellow_Leaf_Curl_Virus",
+  "title": "Tomato — Tomato Yellow Leaf Curl Virus",
+  "description": "Yellowing and curling of leaves often transmitted by whiteflies; no cure available—remove affected plants to prevent spread.",
+  "treatment": {
+    "chemical": "Control whitefly vectors with systemic insecticides; remove infected plants.",
+    "organic": "Use whitefly traps, apply neem oil, remove infected plants, and control weeds."
+  },
+  "human_verified": false
+}

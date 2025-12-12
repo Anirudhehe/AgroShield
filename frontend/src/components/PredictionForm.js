@@ -1,10 +1,29 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useCallback } from "react";
+import { useTranslation } from "react-i18next";
 import axios from "axios";
+import "../i18n";
+import LanguageSwitcher from "./LanguageSwitcher";
+import {
+  cacheDiseaseDescription,
+  getCachedDiseaseDescription,
+} from "../utils/i18nCache";
+import i18n from "../i18n";
+
+// For number formatting
+const formatUnit = (value, unit, locale = "en") => {
+  if (typeof value === "number") {
+    return `${new Intl.NumberFormat(locale, {
+      maximumFractionDigits: 2,
+    }).format(value)} ${unit}`;
+  }
+  return `${value} ${unit}`;
+};
 
 // NOTE: This URL must be updated once deployed (e.g., on Render)
 const API_URL = "http://127.0.0.1:5000/predict";
 
 function PredictionForm() {
+  const { t } = useTranslation();
   const [file, setFile] = useState(null);
   const [imagePreview, setImagePreview] = useState(null);
   const [result, setResult] = useState(null);
@@ -12,6 +31,9 @@ function PredictionForm() {
   const [loadingMessage, setLoadingMessage] = useState("Initializing...");
   const [error, setError] = useState(null);
   const [diseaseInfo, setDiseaseInfo] = useState({});
+  const [localizedDesc, setLocalizedDesc] = useState(null);
+  const [descLoading, setDescLoading] = useState(false);
+  const [descError, setDescError] = useState(null);
 
   const handleFileChange = (event) => {
     const uploadedFile = event.target.files[0];
@@ -75,26 +97,45 @@ function PredictionForm() {
     }
   };
 
-  // Fetch disease descriptions JSON from public folder
-  useEffect(() => {
-    let mounted = true;
-    fetch("/disease_descriptions.json")
-      .then((res) => res.json())
-      .then((data) => {
-        if (mounted) setDiseaseInfo(data);
-      })
-      .catch((err) => {
-        console.warn("Could not load disease descriptions:", err);
-      });
-    return () => {
-      mounted = false;
-    };
+  // Helper to load localized disease description (from IDB or network)
+  const getDiseaseDescription = useCallback(async (diseaseId, lng) => {
+    if (!diseaseId || !lng) return null;
+    setDescLoading(true);
+    setDescError(null);
+    setLocalizedDesc(null);
+    try {
+      // Try IndexedDB first
+      let desc = await getCachedDiseaseDescription(lng, diseaseId);
+      if (!desc) {
+        // Fallback to fetch (URL-encode filename to handle spaces and special chars)
+        const encodedId = encodeURIComponent(diseaseId);
+        const res = await fetch(
+          `/locales/${lng}/disease_descriptions/${encodedId}.json`,
+          { cache: "force-cache" }
+        );
+        if (!res.ok) throw new Error("Not found");
+        desc = await res.json();
+        await cacheDiseaseDescription(lng, diseaseId, desc);
+      }
+      setLocalizedDesc(desc);
+    } catch (e) {
+      console.error(`Failed to load disease description for ${diseaseId}:`, e);
+      setDescError(e.message || "Failed to load description");
+      setLocalizedDesc(null);
+    } finally {
+      setDescLoading(false);
+    }
   }, []);
 
-  const getDescriptionFor = (label) => {
-    if (!label) return null;
-    return diseaseInfo[label] || diseaseInfo["default"] || null;
-  };
+  // When result or language changes, load localized description
+  useEffect(() => {
+    if (result && result.disease_id && i18n.language) {
+      getDiseaseDescription(result.disease_id, i18n.language.split("-")[0]);
+    } else {
+      setLocalizedDesc(null);
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [result, i18n.language]);
 
   // Basic sanitizer: escape HTML, remove simple markdown bold/italic markers, preserve newlines
   const escapeHtml = (unsafe) => {
@@ -153,7 +194,16 @@ function PredictionForm() {
 
   return (
     <div className="container">
-      <h1>AgroShield</h1>
+      <div
+        style={{
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "space-between",
+        }}
+      >
+        <h1>{t("app_title")}</h1>
+        <LanguageSwitcher />
+      </div>
 
       <div className="main-content">
         {/* LEFT PANEL: Upload & Image Preview */}
@@ -167,8 +217,12 @@ function PredictionForm() {
               id="file-upload"
               disabled={loading}
             />
+
             <label htmlFor="file-upload">
-              Drag & drop an image here, or click to select
+              {t(
+                "choose_image",
+                "Drag & drop an image here, or click to select"
+              )}
             </label>
 
             <button
@@ -176,14 +230,14 @@ function PredictionForm() {
               disabled={!file || loading}
               className="btn-predict"
             >
-              {loading ? "Analyzing..." : "Analyze Image"}
+              {loading ? t("analyze_image") + "..." : t("analyze_image")}
             </button>
           </form>
 
           {/* Image Preview */}
           {imagePreview && (
             <div className="image-preview">
-              <h2>Preview</h2>
+              <h2>{t("uploaded_photo", "Preview")}</h2>
               <div style={{ textAlign: "center" }}>
                 <div
                   className="image-card"
@@ -208,7 +262,11 @@ function PredictionForm() {
         {/* RIGHT PANEL: Results Display */}
         <div className="right-panel">
           {/* Error Message */}
-          {error && <div className="error-message">Error: {error}</div>}
+          {error && (
+            <div className="error-message">
+              {t("error", "Error")}: {error}
+            </div>
+          )}
 
           {/* Results Display */}
           {result && (
@@ -227,70 +285,114 @@ function PredictionForm() {
 
               <h2>{result.prediction}</h2>
 
-              {/* Description fetched from JSON */}
+              {/* Localized Description and Suggestions */}
               <div style={{ marginTop: 0 }}>
-                {(() => {
-                  const info = getDescriptionFor(result.prediction);
-                  if (!info)
-                    return (
-                      <p style={{ color: "#777" }}>
-                        No description available for this disease.
-                      </p>
-                    );
-                  return (
-                    <div className="disease-description">
-                      <strong>{info.title}</strong>
-                      <p>{info.description}</p>
-                    </div>
-                  );
-                })()}
+                {descLoading && (
+                  <p style={{ color: "#777" }}>{t("loading", "Loading...")}</p>
+                )}
+                {descError && (
+                  <p style={{ color: "#d32f2f" }}>
+                    {t(
+                      "no_description",
+                      "No description available for this disease."
+                    )}
+                  </p>
+                )}
+                {localizedDesc && (
+                  <div className="disease-description">
+                    <strong>{localizedDesc.title}</strong>
+                    <p>{localizedDesc.description}</p>
+                    {/* Safety badge for unverified translations */}
+                    {localizedDesc.human_verified === false && (
+                      <span
+                        className="verify-badge"
+                        style={{
+                          color: "#d32f2f",
+                          fontWeight: 600,
+                          display: "inline-block",
+                          marginTop: 4,
+                        }}
+                      >
+                        {t("verify_badge")}
+                      </span>
+                    )}
+                  </div>
+                )}
+                {!descLoading && !descError && !localizedDesc && (
+                  <p style={{ color: "#777" }}>
+                    {t(
+                      "no_description",
+                      "No description available for this disease."
+                    )}
+                  </p>
+                )}
               </div>
 
               <div className="suggestion-box">
-                <h3>Treatment Suggestions</h3>
+                <h3>{t("treatment_suggestions")}</h3>
 
                 <div className="suggestion-cards">
                   {/* Single card containing both suggestions stacked */}
                   <div className="suggestion-card">
                     <div className="suggestion-entry suggestion-entry--chemical">
-                      <h4>🧪 Chemical/Synthetic</h4>
-                      <div
-                        className="suggestion-text"
-                        dangerouslySetInnerHTML={{
-                          __html: renderSuggestionHtml(result.suggestion),
-                        }}
-                      />
-                      <button
-                        className="copy-btn"
-                        onClick={() =>
-                          copyToClipboard(result.suggestion, "Chemical")
-                        }
-                        title="Copy to clipboard"
-                      >
-                        📋 Copy
-                      </button>
-                    </div>
-
-                    <hr className="suggestion-separator" />
-
-                    <div className="suggestion-entry suggestion-entry--organic">
-                      <h4>🌿 Organic Alternative</h4>
+                      <h4>🧪 {t("chemical")}</h4>
                       <div
                         className="suggestion-text"
                         dangerouslySetInnerHTML={{
                           __html: renderSuggestionHtml(
-                            result.organic_suggestion
+                            (localizedDesc &&
+                              localizedDesc.treatment &&
+                              localizedDesc.treatment.chemical) ||
+                              result.suggestion
                           ),
                         }}
                       />
                       <button
                         className="copy-btn"
                         onClick={() =>
-                          copyToClipboard(result.organic_suggestion, "Organic")
+                          copyToClipboard(
+                            (localizedDesc &&
+                              localizedDesc.treatment &&
+                              localizedDesc.treatment.chemical) ||
+                              result.suggestion,
+                            t("chemical")
+                          )
                         }
-                        title="Copy to clipboard"
+                        title={t("copy")}
                       >
-                        📋 Copy
+                        📋 {t("copy")}
+                      </button>
+                    </div>
+
+                    <hr className="suggestion-separator" />
+
+                    <div className="suggestion-entry suggestion-entry--organic">
+                      <h4>🌿 {t("organic")}</h4>
+                      <div
+                        className="suggestion-text"
+                        dangerouslySetInnerHTML={{
+                          __html: renderSuggestionHtml(
+                            (localizedDesc &&
+                              localizedDesc.treatment &&
+                              localizedDesc.treatment.organic) ||
+                              result.organic_suggestion
+                          ),
+                        }}
+                      />
+                      <button
+                        className="copy-btn"
+                        onClick={() =>
+                          copyToClipboard(
+                            (localizedDesc &&
+                              localizedDesc.treatment &&
+                              localizedDesc.treatment.organic) ||
+                              result.organic_suggestion,
+                            t("organic")
+                          )
+                        }
+                        title={t("copy")}
+                      >
+                        📋 {t("copy")}
                       </button>
                     </div>
                   </div>
@@ -300,7 +402,7 @@ function PredictionForm() {
               {/* Action Buttons */}
               <div className="action-buttons">
                 <button className="btn-try-again" onClick={handleTryAgain}>
-                  🔄 Analyze Another Image
+                  🔄 {t("analyze_another")}
                 </button>
               </div>
             </div>

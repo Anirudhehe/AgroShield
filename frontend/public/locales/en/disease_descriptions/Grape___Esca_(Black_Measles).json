@@ -1,0 +1,10 @@
+{
+  "id": "Grape___Esca_(Black_Measles)",
+  "title": "Grape — Esca (Black Measles)",
+  "description": "A complex trunk disease leading to discolored fruit and vine decline; focus on sanitation, removal of infected wood, and cultural controls.",
+  "treatment": {
+    "chemical": "No effective chemical treatment. Focus on prevention through sanitation.",
+    "organic": "Remove infected wood promptly, disinfect pruning tools, and ensure good site drainage."
+  },
+  "human_verified": false
+}

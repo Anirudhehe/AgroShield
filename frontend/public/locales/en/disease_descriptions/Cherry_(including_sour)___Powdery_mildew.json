@@ -1,0 +1,10 @@
+{
+  "id": "Cherry_(including_sour)___Powdery_mildew",
+  "title": "Cherry — Powdery mildew",
+  "description": "White powdery fungal growth on leaves and shoots, often in humid but not saturated conditions. Prune for airflow and apply sulfur or potassium bicarbonate treatments if needed.",
+  "treatment": {
+    "chemical": "Apply myclobutanil or sulfur-based fungicides at first sign of disease.",
+    "organic": "Prune for airflow, use potassium bicarbonate or neem oil sprays."
+  },
+  "human_verified": false
+}

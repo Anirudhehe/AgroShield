@@ -1,0 +1,10 @@
+{
+  "id": "Orange___Haunglongbing_(Citrus_greening)",
+  "title": "Orange — Huanglongbing (Citrus greening)",
+  "description": "A bacterial disease transmitted by psyllids, causing yellowing, misshapen fruit, and tree decline; manage vectors and follow local eradication guidelines.",
+  "treatment": {
+    "chemical": "No curative treatment available. Control psyllid vectors with insecticides.",
+    "organic": "Remove infected trees, manage psyllid populations with beneficial insects, and apply horticultural oils."
+  },
+  "human_verified": false
+}

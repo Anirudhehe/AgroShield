@@ -1,0 +1,10 @@
+{
+  "id": "Tomato___Tomato_mosaic_virus",
+  "title": "Tomato — Tomato mosaic virus",
+  "description": "Leaf mottling and distortion; no cure—remove infected plants and control aphid vectors.",
+  "treatment": {
+    "chemical": "Control aphid vectors with systemic insecticides; remove infected plants.",
+    "organic": "Control aphids with neem oil, remove infected plants, and disinfect tools."
+  },
+  "human_verified": false
+}

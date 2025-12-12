@@ -1,0 +1,10 @@
+{
+  "id": "Potato___Late_blight",
+  "title": "Potato — Late blight",
+  "description": "Rapidly spreading blight causing dark lesions and tuber rot (Phytophthora infestans); use certified seed, good drainage, and timely fungicides.",
+  "treatment": {
+    "chemical": "Apply mancozeb or chlorothalonil when weather is favorable for disease and repeat every 7-10 days.",
+    "organic": "Use certified seed potatoes, improve drainage, remove infected plants, and use copper-based sprays."
+  },
+  "human_verified": false
+}

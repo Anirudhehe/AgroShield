@@ -1,0 +1,10 @@
+{
+  "id": "Grape___Leaf_blight_(Isariopsis_Leaf_Spot)",
+  "title": "Grape — Leaf blight (Isariopsis)",
+  "description": "Fungal leaf spots that reduce canopy health; avoid overhead irrigation and apply copper-based controls when necessary.",
+  "treatment": {
+    "chemical": "Apply mancozeb or myclobutanil starting at bud break and repeat as needed.",
+    "organic": "Avoid overhead irrigation, improve air circulation, and use copper-based sprays."
+  },
+  "human_verified": false
+}

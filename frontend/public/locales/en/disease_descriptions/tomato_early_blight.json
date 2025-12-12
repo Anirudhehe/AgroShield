@@ -1,0 +1,10 @@
+{
+  "id": "tomato_early_blight",
+  "title": "Tomato — Early Blight",
+  "description": "Serious disease causing water-soaked lesions that rapidly progress; apply recommended fungicides and remove infected plants promptly.",
+  "treatment": {
+    "chemical": "Apply fungicides with mancozeb or chlorothalonil.",
+    "organic": "Apply Copper-based organic fungicides and prune lower leaves to improve airflow."
+  },
+  "human_verified": true
+}

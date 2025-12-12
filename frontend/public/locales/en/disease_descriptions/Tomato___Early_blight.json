@@ -1,0 +1,10 @@
+{
+  "id": "Tomato___Early_blight",
+  "title": "Tomato — Early blight",
+  "description": "Concentric ring spots on lower leaves caused by Alternaria; remove affected foliage and apply protective fungicides.",
+  "treatment": {
+    "chemical": "Apply mancozeb or chlorothalonil starting when plants are 12 inches tall and repeat every 7-10 days.",
+    "organic": "Remove infected foliage, improve air circulation, and use copper-based sprays."
+  },
+  "human_verified": false
+}
