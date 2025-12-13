@@ -305,20 +305,39 @@ h2 {
 }
 
 /* --- Responsive Design --- */
-@media (max-width: 599px) {
+@media (max-width: 768px) {
   .container {
-    margin: 50px 15px 30px 15px;
+    margin: 20px auto;
+    width: 95vw;
+    height: auto; /* Allow height to grow */
+    min-height: 90vh;
+  }
+
+  .main-content {
+    flex-direction: column;
+    overflow: visible; /* Let it scroll naturally */
+  }
+
+  .left-panel,
+  .right-panel {
+    flex: auto;
+    width: 100%;
+    overflow: visible;
+    border-right: none;
     padding: 20px;
   }
 
+  .left-panel {
+    border-bottom: 1px solid var(--border-light);
+  }
+
   h1 {
-    font-size: 1.8em;
-    margin-bottom: 25px;
+    font-size: 1.5em;
+    padding: 15px 20px;
   }
 
   h2 {
-    font-size: 1.2em;
-    margin-top: 20px;
+    font-size: 1.25em;
   }
 
   .suggestion-entry {
