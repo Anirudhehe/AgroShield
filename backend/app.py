@@ -93,6 +93,7 @@ def predict():
         return jsonify({
             'success': True,
             'prediction': predicted_class,
+            'disease_id': predicted_class,
             'suggestion': suggestion,
             'organic_suggestion': organic_suggestion
         })

@@ -18,6 +18,11 @@ const resources = {
       organic: "Organic Alternative",
       verify_badge: "⚠️ Verify with agronomist",
       copy: "Copy",
+      severity_healthy: "🟢 Healthy",
+      severity_severe: "🔴 Severe",
+      severity_moderate: "🟠 Moderate",
+      severity_mild: "🟡 Mild",
+      severity_unknown: "Unknown",
     },
   },
 };
@@ -43,7 +48,10 @@ i18n
 // Helper: try to load and cache locale bundles on demand
 export async function loadLocale(lng) {
   // en is embedded
-  if (!lng || lng === "en") return resources.en.translation;
+  if (!lng || lng === "en") {
+    i18n.changeLanguage("en");
+    return resources.en.translation;
+  }
 
   // Try IndexedDB first
   const cached = await getCachedLocale(lng);

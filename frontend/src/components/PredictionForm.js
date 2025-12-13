@@ -159,21 +159,21 @@ function PredictionForm() {
   // Helper: get disease severity based on name
   const getSeverity = (diseaseName) => {
     if (!diseaseName)
-      return { level: "unknown", color: "#999999", label: "Unknown" };
+      return { level: "unknown", color: "#999999", labelKey: "severity_unknown" };
     const name = diseaseName.toLowerCase();
     if (name.includes("healthy")) {
-      return { level: "healthy", color: "#4CAF50", label: "🟢 Healthy" };
+      return { level: "healthy", color: "#4CAF50", labelKey: "severity_healthy" };
     } else if (
       name.includes("blight") ||
       name.includes("late") ||
       name.includes("rust") ||
       name.includes("virus")
     ) {
-      return { level: "severe", color: "#D32F2F", label: "🔴 Severe" };
+      return { level: "severe", color: "#D32F2F", labelKey: "severity_severe" };
     } else if (name.includes("spot") || name.includes("scab")) {
-      return { level: "moderate", color: "#FF9800", label: "🟠 Moderate" };
+      return { level: "moderate", color: "#FF9800", labelKey: "severity_moderate" };
     } else {
-      return { level: "mild", color: "#FFC107", label: "🟡 Mild" };
+      return { level: "mild", color: "#FFC107", labelKey: "severity_mild" };
     }
   };
 
@@ -279,7 +279,7 @@ function PredictionForm() {
                     backgroundColor: getSeverity(result.prediction).color,
                   }}
                 >
-                  {getSeverity(result.prediction).label}
+                  {t(getSeverity(result.prediction).labelKey)}
                 </div>
               </div>
 
@@ -343,7 +343,7 @@ function PredictionForm() {
                             (localizedDesc &&
                               localizedDesc.treatment &&
                               localizedDesc.treatment.chemical) ||
-                              result.suggestion
+                            result.suggestion
                           ),
                         }}
                       />
@@ -354,7 +354,7 @@ function PredictionForm() {
                             (localizedDesc &&
                               localizedDesc.treatment &&
                               localizedDesc.treatment.chemical) ||
-                              result.suggestion,
+                            result.suggestion,
                             t("chemical")
                           )
                         }
@@ -375,7 +375,7 @@ function PredictionForm() {
                             (localizedDesc &&
                               localizedDesc.treatment &&
                               localizedDesc.treatment.organic) ||
-                              result.organic_suggestion
+                            result.organic_suggestion
                           ),
                         }}
                       />
@@ -386,7 +386,7 @@ function PredictionForm() {
                             (localizedDesc &&
                               localizedDesc.treatment &&
                               localizedDesc.treatment.organic) ||
-                              result.organic_suggestion,
+                            result.organic_suggestion,
                             t("organic")
                           )
                         }
