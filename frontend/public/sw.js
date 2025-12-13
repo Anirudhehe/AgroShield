@@ -1,6 +1,10 @@
 /* Service Worker - cache locales and manifest for offline language support */
-const CACHE_NAME = "agro-locales-v1";
-const LOCALE_PATHS = [
+const CACHE_NAME = "agro-shield-v2";
+const CACHE_URLS = [
+  "/",
+  "/index.html",
+  "/favicon.ico",
+  "/logo192.png",
   "/locales-manifest.json",
   "/locales/en/translation.json",
   "/locales/hi/translation.json",
@@ -9,7 +13,7 @@ const LOCALE_PATHS = [
 
 self.addEventListener("install", (event) => {
   event.waitUntil(
-    caches.open(CACHE_NAME).then((cache) => cache.addAll(LOCALE_PATHS))
+    caches.open(CACHE_NAME).then((cache) => cache.addAll(CACHE_URLS))
   );
   self.skipWaiting();
 });
