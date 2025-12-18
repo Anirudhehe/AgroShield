@@ -1,3 +1,33 @@
+# AgroShield
+
+AgroShield is a full-stack application designed to assist in crop disease prediction and management. It leverages machine learning and a user-friendly interface to help farmers and agricultural professionals identify crop diseases and take preventive actions.
+
+## Features
+
+- **Crop Disease Prediction:** Upload images of crops to get instant disease predictions using a trained ResNet model.
+- **Modern Frontend:** React-based frontend for seamless user experience.
+- **RESTful Backend:** Python Flask backend serving the ML model and handling API requests.
+- **Easy Deployment:** Simple setup for both backend and frontend.
+
+## Project Structure
+
+```
+AgroShield/
+├── backend/
+│   ├── AgroShield_Classes.py
+│   ├── app.py
+│   ├── requirements.txt
+│   └── model/
+│       └── best_resnet_model.pth
+├── frontend/
+│   ├── package.json
+│   ├── public/
+│   └── src/
+│       ├── App.js
+│       └── components/
+│           └── PredictionForm.js
+└── README.md
+```
 ## Multilingual (offline) — hi + kn
 
 This project includes an offline-capable multilingual MVP supporting English (embedded), Hindi (`hi`) and Kannada (`kn`). The frontend caches translation bundles and long disease descriptions into IndexedDB for offline use, and a Service Worker pre-caches locale files and manifest.
@@ -36,36 +66,6 @@ Security note
 
 - Always show `verify_badge` for any treatment/dosage that is not `human_verified: true`.
 
-# AgroShield
-
-AgroShield is a full-stack application designed to assist in crop disease prediction and management. It leverages machine learning and a user-friendly interface to help farmers and agricultural professionals identify crop diseases and take preventive actions.
-
-## Features
-
-- **Crop Disease Prediction:** Upload images of crops to get instant disease predictions using a trained ResNet model.
-- **Modern Frontend:** React-based frontend for seamless user experience.
-- **RESTful Backend:** Python Flask backend serving the ML model and handling API requests.
-- **Easy Deployment:** Simple setup for both backend and frontend.
-
-## Project Structure
-
-```
-AgroShield/
-├── backend/
-│   ├── AgroShield_Classes.py
-│   ├── app.py
-│   ├── requirements.txt
-│   └── model/
-│       └── best_resnet_model.pth
-├── frontend/
-│   ├── package.json
-│   ├── public/
-│   └── src/
-│       ├── App.js
-│       └── components/
-│           └── PredictionForm.js
-└── README.md
-```
 
 ## Getting Started
 
