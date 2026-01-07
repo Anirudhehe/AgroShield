@@ -10,7 +10,15 @@ import os
 from AgroShield_Classes import CLASSES, FERTILIZER_SUGGESTIONS, ORGANIC_SUGGESTIONS
 
 app = Flask(__name__)
-CORS(app) # Allow all origins commonly for public APIs 
+CORS(app) # Allow all origins commonly for public APIs
+
+# Force CORS headers on every response to be absolutely sure
+@app.after_request
+def add_cors_headers(response):
+    response.headers["Access-Control-Allow-Origin"] = "*"
+    response.headers["Access-Control-Allow-Headers"] = "Content-Type, Authorization"
+    response.headers["Access-Control-Allow-Methods"] = "GET, POST, OPTIONS"
+    return response 
 
 # --- CONFIGURATION & MODEL LOADING ---
 
