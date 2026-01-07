@@ -10,7 +10,7 @@ import os
 from AgroShield_Classes import CLASSES, FERTILIZER_SUGGESTIONS, ORGANIC_SUGGESTIONS
 
 app = Flask(__name__)
-CORS(app, origins=["https://agroshield-frontend.onrender.com", "http://localhost:3000", "http://localhost:5173"]) 
+CORS(app) # Allow all origins commonly for public APIs 
 
 # --- CONFIGURATION & MODEL LOADING ---
 
